@@ -27,4 +27,18 @@ function changeImage() {
 
     this.dataset.data = data;
     this.style.backgroundImage = 'url(images/' + img[data] + '.png';
+
+    checkSurprise()
+};
+
+function checkSurprise() {
+    let res = [];
+    square.forEach(function(element) {
+        res.push(element.dataset.data);
+    });
+    console.log(res);
+
+    if (res.join('') == '4444') {
+        document.querySelector('#out').innerHTML = 'Вы выйграли 1000000!';
+    };
 };
