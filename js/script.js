@@ -1,4 +1,4 @@
-const img = ['camel', 'cat', 'dog', 'duck', 'money', 'ticket', 'tiger'];
+const img = ['chest', 'coin', 'coins', 'diamond', 'dollar', 'gold', 'money', 'piggy-bank'];
 let square = document.querySelectorAll('.square');
 console.log(square);
 
