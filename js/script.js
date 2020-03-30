@@ -1,6 +1,6 @@
 const img = ['chest', 'coin', 'coins', 'dollar', 'diamond', 'gold', 'money', 'piggy-bank'];
 let square = document.querySelectorAll('.square');
-console.log(square);
+// console.log(square);
 
 function random(min, max) {
     return Math.round(min - 0.5 + Math.random() * (max - min + 1));
@@ -8,16 +8,17 @@ function random(min, max) {
 
 square.forEach(function(element) {
     let randNum = random(0, img.length - 1);
-    console.log(randNum);
+    // console.log(randNum);
     element.style.backgroundImage = 'url(images/' + img[randNum] + '.png';
     element.dataset.data = randNum;
     element.onclick = changeImage;
 });
 
 function changeImage() {
+    document.querySelector('#yourMoney').value--;
     document.querySelector('#out').innerHTML = '';
     let data = this.dataset.data;
-    console.log(data);
+    // console.log(data);
 
     if (+data + 1 < img.length) {
         data++;
@@ -32,11 +33,12 @@ function changeImage() {
 };
 
 function checkSurprise() {
+    const yourMoney = document.querySelector('#yourMoney').value;
     let res = [];
     square.forEach(function(element) {
         res.push(element.dataset.data);
     });
-    console.log(res);
+    // console.log(res);
 
     if (res.join('') == '1111') {
         document.querySelector('#out').innerHTML = 'Вы выйграли 4 монет';
@@ -54,5 +56,7 @@ function checkSurprise() {
         document.querySelector('#out').innerHTML = 'Вы выйграли 8430 монет';
     } else if (res.join('') == '0000') {
         document.querySelector('#out').innerHTML = 'Вы выйграли 38000 монет';
+    } else if (yourMoney <= 0) { 
+        // alert('Вы проиграли!');
     };
 };
