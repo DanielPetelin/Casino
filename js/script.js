@@ -1,4 +1,4 @@
-const img = ['chest', 'coin', 'coins', 'diamond', 'dollar', 'gold', 'money', 'piggy-bank'];
+const img = ['chest', 'coin', 'coins', 'dollar', 'diamond', 'gold', 'money', 'piggy-bank'];
 let square = document.querySelectorAll('.square');
 console.log(square);
 
@@ -38,7 +38,21 @@ function checkSurprise() {
     });
     console.log(res);
 
-    if (res.join('') == '4444') {
-        document.querySelector('#out').innerHTML = 'Вы выйграли 1000000!';
+    if (res.join('') == '1111') {
+        document.querySelector('#out').innerHTML = 'Вы выйграли 4 монет';
+    } else if (res.join('') == '2222') {
+        document.querySelector('#out').innerHTML = 'Вы выйграли 12 монет';
+    } else if (res.join('') == '3333') {
+        document.querySelector('#out').innerHTML = 'Вы выйграли 72 монет';
+    } else if (res.join('') == '7777') {
+        document.querySelector('#out').innerHTML = 'Вы выйграли 560 монет';
+    } else if (res.join('') == '6666') {
+        document.querySelector('#out').innerHTML = 'Вы выйграли 1200 монет';
+    } else if (res.join('') == '4444') {
+        document.querySelector('#out').innerHTML = 'Вы выйграли 3120 монет';
+    } else if (res.join('') == '5555') {
+        document.querySelector('#out').innerHTML = 'Вы выйграли 8430 монет';
+    } else if (res.join('') == '0000') {
+        document.querySelector('#out').innerHTML = 'Вы выйграли 38000 монет';
     };
 };
