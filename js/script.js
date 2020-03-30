@@ -41,21 +41,21 @@ function checkSurprise() {
     // console.log(res);
 
     if (res.join('') == '1111') {
-        document.querySelector('#out').innerHTML = 'Вы выйграли 4 монет';
+        document.querySelector('#out').innerHTML = 'Вы выйграли только 4 монет';
     } else if (res.join('') == '2222') {
-        document.querySelector('#out').innerHTML = 'Вы выйграли 12 монет';
+        document.querySelector('#out').innerHTML = 'Вы получили 12 монет';
     } else if (res.join('') == '3333') {
-        document.querySelector('#out').innerHTML = 'Вы выйграли 72 монет';
+        document.querySelector('#out').innerHTML = 'Вы выйграли 72 монет. Неплохо.';
     } else if (res.join('') == '7777') {
-        document.querySelector('#out').innerHTML = 'Вы выйграли 560 монет';
+        document.querySelector('#out').innerHTML = 'Вы получаете 560 монет. Продолжайте играть!';
     } else if (res.join('') == '6666') {
-        document.querySelector('#out').innerHTML = 'Вы выйграли 1200 монет';
+        document.querySelector('#out').innerHTML = 'Вы выйграли 1200 монет!';
     } else if (res.join('') == '4444') {
-        document.querySelector('#out').innerHTML = 'Вы выйграли 3120 монет';
+        document.querySelector('#out').innerHTML = 'Вам удалось получить алмаз!? 3120 монет!';
     } else if (res.join('') == '5555') {
-        document.querySelector('#out').innerHTML = 'Вы выйграли 8430 монет';
+        document.querySelector('#out').innerHTML = 'Ваш выйгрыш составил 8430 монет!';
     } else if (res.join('') == '0000') {
-        document.querySelector('#out').innerHTML = 'Вы выйграли 38000 монет';
+        document.querySelector('#out').innerHTML = 'Вы получили самый большой приз! 38000 монет теперь ваши!';
     } else if (yourMoney <= 0) { 
         // alert('Вы проиграли!');
     };
