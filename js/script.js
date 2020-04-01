@@ -1,7 +1,8 @@
 const img = ['chest', 'coin', 'coins', 'dollar', 'diamond', 'gold', 'money', 'piggy-bank', 'utilities'];
 let square = document.querySelectorAll('.square');
 const PRIZE = {
-    '1111': 12,
+    '2222': 12,
+    '1111': 4,
     '3333': 72,
     '7777': 560,
     '6666': 1200,
