@@ -1,15 +1,17 @@
-const img = ['chest', 'coin', 'coins', 'dollar', 'diamond', 'gold', 'money', 'piggy-bank', 'utilities'];
+const img = ['chest', 'coin', 'coins', 'dollar', 'diamond', 'gold', 'money', 'piggy-bank', 'robbery', 'utilities', 'minus'];
 let square = document.querySelectorAll('.square');
 const PRIZE = {
-    '2222': 12,
     '1111': 4,
+    '2222': 12,
     '3333': 72,
     '7777': 560,
     '6666': 1200,
     '4444': 3120,
     '5555': 8430,
     '0000': 38000,
-    '8888': -50000
+    '10101010': -1000,
+    '9999': -3000,
+    '8888': -5000,
 }
 
 function random(min, max) {
@@ -27,7 +29,7 @@ square.forEach(function(element) {
 function updateTotalMoney(value) {
     document.querySelector('#yourMoney').value = getTotalMoney() + value;
 
-    showMessage('You won only ' + value + ' coins');
+    showMessage('Your winnings totaled ' + value + ' coins');
     // showBadMessage('Alas, you lost as many as ' + value + ' coins');
 }
 
@@ -45,7 +47,7 @@ function isEndGame() {
 
 function changeImage() {
     if (isEndGame()) {
-        showMessage('You don\'t have money');
+        showMessage('<b>' + 'You don\'t have money' + '</b>');
         return false;
     }
 
@@ -54,7 +56,7 @@ function changeImage() {
     let data = this.dataset.data;
 
     if (+data + 1 < img.length) {
-        data = random(0, 8); // вывод на рандом
+        data = random(0, 10); // вывод на рандом
     } else {
         data = 0;
     };
